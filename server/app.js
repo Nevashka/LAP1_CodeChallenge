@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-const books = require('./api.js')
+const books = require('./api.js');
 
 app.use(cors())
 app.use(express.json())
