@@ -22,7 +22,7 @@ const books = [
 ]
 
 function getRandomBook () {
-    let book = Math.floor(Math.random()*10);
+    let book = Math.floor(Math.random() * books.length);
     return books[book]
 }
 
@@ -36,16 +36,8 @@ app.get('/books', (req, res) => {
 
 app.get('/books/:id', (req, res) => {
 
-     try {
-
-        res.send(books[req.params.id])
-
-    } catch(err) {
-''
-        res.json(err);
-        res.status(404).send(err);
-
-      }
+    
+     
 })
 
 module.exports = app;
