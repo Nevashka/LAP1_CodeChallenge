@@ -8,6 +8,6 @@ Try to build a web page as similar as possible with Google. Which shall have:
 
 ## Aditional Information
 
-One of our teammattes will be assigned as a reviwer so they will be looking at our code after it's done and giving feedbacks. We are doing the same for them. 
+One of our teammates will be assigned as a reviwer so they will be looking at our code after it's done and giving feedbacks. We are doing the same for them. 
 
 
