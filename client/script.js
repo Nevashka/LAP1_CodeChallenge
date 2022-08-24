@@ -1,5 +1,8 @@
-let searchBtn = document.querySelector('.button-search')
+const searchBtn = document.querySelector('.button-search');
+const random = document. querySelector('.button-random');
+
 searchBtn.addEventListener('click', fetcher);
+
 
 function fetcher(e) {
   e.preventDefault()
@@ -7,9 +10,12 @@ function fetcher(e) {
     .then((response) => response.json()) // promise
     .then((data) => {
       console.log(data)
-      window.location.assign("result.html")
+      // window.location.assign("./result.html")
+      document.getElementById('text').textContent = JSON.stringify(data);
     });
 }
+
+
 // .replace(/{"quote":/, "")
 //   .replace("}", "").replaceAll("\"", "")
 
