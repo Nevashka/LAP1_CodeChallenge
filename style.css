@@ -5,7 +5,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 100px 300px 90px 500px repeat(4, 1fr);
+    grid-template-rows: 100px 300px 20px 500px repeat(4, 1fr);
     grid-template-areas:
     "home"
     "logo"
@@ -15,7 +15,7 @@ body {
 
 .home-container {
     grid-area: home;
-    background-color: aqua;
+    background-color: azure;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -30,26 +30,27 @@ body {
 
 .logo-container {
     grid-area: logo;
-    background-color: antiquewhite;
+    background-color: azure;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logo-img {
-
+.logo {
+    max-width: 400px;
 }
 
 .search-bar-container {
     grid-area: search;
-    background-color: aquamarine;
+    background-color: azure;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .search-bar {
-border: 2px solid black;
+border: 1px solid black;
+text-align: center;
 }
 
 .button-container {
