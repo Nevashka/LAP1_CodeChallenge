@@ -35,9 +35,16 @@ app.get('/books', (req, res) => {
 })
 
 app.get('/books/:id', (req, res) => {
-
     
-     
+     if (books[req.params.id]) {
+
+        res.send(books[req.params.id])
+
+     } else {
+
+        res.status(404).send({error: `Choose a number between 1 and ${books.length}`})
+        
+     }
 })
 
 module.exports = app;
