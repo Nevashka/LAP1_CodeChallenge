@@ -5,12 +5,12 @@
 
 body {
     display: grid;
-    grid-template-rows: 100px 300px 20px 500px repeat(4, 1fr);
+    grid-template-rows: 100px 200px 70px 500px repeat(4, 1fr);
     grid-template-areas:
-    "home"
-    "logo"
-    "search"
-    "buttons" ;
+        "home"
+        "logo"
+        "search"
+        "buttons";
 }
 
 .home-container {
@@ -28,29 +28,40 @@ body {
     padding-right: 20px;
 }
 
+.home-icon:hover {
+    transform: translateY(2px);
+}
+
 .logo-container {
     grid-area: logo;
     background-color: azure;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-top: 100px;
 }
 
 .logo {
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .search-bar-container {
     grid-area: search;
     background-color: azure;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
+    padding-top: 35px;
 }
 
 .search-bar {
-border: 1px solid black;
-text-align: center;
+    border: 1px solid #D3D3D3;
+    outline: none;
+    text-align: center;
+    height: 35px;
+    width: 450px;
+    border-radius: 25px;
 }
 
 .button-container {
@@ -59,14 +70,16 @@ text-align: center;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 20px;
+    padding: 8px;
     column-gap: 10px
 }
 
-.button-search {
-
+button {
+    border-radius: 8px;
+    border: 1px solid #D3D3D3;
+    padding: 5px;
 }
 
-.button-random {
-
+button:hover {
+    transform: translateY(2px);
 }
