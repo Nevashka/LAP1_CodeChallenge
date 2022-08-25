@@ -8,6 +8,7 @@ app.use(express.json())
 
 function getRandomBook() {
     let book = Math.floor(Math.random() * 10);
+
     return books[book]
 }
 
@@ -28,6 +29,7 @@ app.get('/books/:id', (req, res) => {
         throw Error('book id: ' + req.params.id + ' does not exist')
     }
     res.send(books[req.params.id])
+
 })
 
 module.exports = app;
