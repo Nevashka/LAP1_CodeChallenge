@@ -1,5 +1,6 @@
 const searchBtn = document.querySelector('.button-search');
-const random = document. querySelector('.button-random');
+const random = document.querySelector('.button-random');
+
 
 searchBtn.addEventListener('click', fetcher);
 
@@ -11,7 +12,8 @@ function fetcher(e) {
     .then((data) => {
       console.log(data)
       // window.location.assign("./result.html")
-      document.getElementById('text').textContent = JSON.stringify(data);
+
+      document.querySelector('#text').textContent = JSON.stringify(data);
     });
 }
 
@@ -20,3 +22,5 @@ function fetcher(e) {
 //   .replace("}", "").replaceAll("\"", "")
 
 // document.querySelector("#output").textContent = JSON.stringify(data[Math.floor(Math.random() * data.length)])
+
+// new_p.textContent = JSON.stringify(data);

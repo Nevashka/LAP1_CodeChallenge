@@ -11,3 +11,24 @@ Try to build a web page as similar as possible to Google. Which shall have:
 We are working in pairs. Another pair will be assigned as a reviwer so they will be looking at our code after it's done and giving feedbacks. We are doing the same for them. 
 
 
+## Tools
+
+NPM Modules used:
+
+Server side:
+```
+Nodemon
+Express
+```
+
+Client side:
+```
+Watchfy
+Concurrently
+```
+
+Tests:
+```
+Jest
+Supertest
+```
