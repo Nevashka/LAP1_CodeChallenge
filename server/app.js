@@ -24,10 +24,11 @@ app.get('/random-book', (req, res) => {
 })
 
 app.get('/books/:id', (req, res) => {
-    if (req.params.id < 0 || req.params.id > 9) {
-        throw Error('book id: ' + req.params.id + ' does not exist')
-    }
-    res.send(books[req.params.id])
+    if (books[req.params.id-1]) {
+        res.send(books[req.params.id-1])
+     } else {
+        res.status(404).send({error: `Choose a number between 1 and ${books.length}`})
+     }
 })
 
 module.exports = app;
