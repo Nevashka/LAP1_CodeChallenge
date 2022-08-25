@@ -1,9 +1,7 @@
 const express = require('express');
+// const books = require('./api.json')
 const app = express();
 const cors = require('cors');
-// const router = express.Router();
-
-// const books = require('./api.js'); //API containing books
 
 app.use(cors())
 app.use(express.json())
@@ -23,6 +21,7 @@ const books = [
 
 function getRandomBook () {
     let book = Math.floor(Math.random() * books.length-1);
+
     return books[book]
 }
 
@@ -31,20 +30,19 @@ app.get('/', (req, res) => {
 })
 
 app.get('/books', (req, res) => {
-    res.json(books).status(200);
+    res.send(books).status(200);
 })
 
 app.get('/random', (req, res) => {
-    res.json(getRandomBook()).status(200)
+    res.send(getRandomBook()).status(200)
 })
+
+// app.get('/random-book', (req, res) => {
+//     res.send(getRandomBook(books));
+// })
 
 app.get('/books/:id', (req, res) => {
 
-    // const idx = parseInt(req.params.id);
-
-    // if (idx > 0 && idx >= books.length) {
-    //     res.send(books[idx-1])
-    // }
     
      if (books[req.params.id-1]) {
 

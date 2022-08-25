@@ -2,10 +2,10 @@ const searchBtn = document.querySelector('.button-search');
 const random = document.querySelector('.button-random');
 
 
-searchBtn.addEventListener('click', fetcher);
+searchBtn.addEventListener('click', getBooks);
 
 
-function fetcher(e) {
+function getBooks(e) {
   e.preventDefault()
   fetch('http://localhost:3000/books')
     .then((response) => response.json()) // promise
@@ -17,10 +17,3 @@ function fetcher(e) {
     });
 }
 
-
-// .replace(/{"quote":/, "")
-//   .replace("}", "").replaceAll("\"", "")
-
-// document.querySelector("#output").textContent = JSON.stringify(data[Math.floor(Math.random() * data.length)])
-
-// new_p.textContent = JSON.stringify(data);
